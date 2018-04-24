@@ -1,0 +1,36 @@
+.signUpForm{
+	@include formLook;
+	width: 60%;
+
+	&__header {
+		color: $color-med-navy;
+		font-family: $font-lobster;
+		font-size: 3.6rem;
+		margin-top: 1rem;
+	}
+
+	&__copy {
+		font-weight: 300;
+		font-size: 2.2rem;
+		color: $color-med-navy;
+		width: 60%;
+		margin: 0 auto 2.4rem auto;
+		// text-align: center;
+	}
+
+	&__label{
+		@include labelLook;
+	}
+
+	&__input {
+		@include inputLook;
+
+		&--state{
+			width: 60px;
+		}
+	}
+
+	.signUpButton{
+		@include formButton
+	}
+}

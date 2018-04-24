@@ -1,0 +1,25 @@
+.loginForm {
+	@include formLook;
+	width: 310px;	
+	
+	&__container {
+		margin: 0 auto;
+		
+	}
+
+	&__header {
+		@include formHeader;
+	}
+
+	&__label{
+		@include labelLook;
+	}
+
+	&__input {
+		@include inputLook;
+	}
+
+	&__button {
+		@include formButton;
+	}
+}

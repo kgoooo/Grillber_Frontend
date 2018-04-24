@@ -1,0 +1,19 @@
+.signUpP {
+	background-image: linear-gradient(180deg, rgba($color-dark-navy, .7), rgba($color-dark-navy, .15)),
+		url("http://kgoehringer.io/resources/signup_image-min.jpg");
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	display: inline-block;
+	background-attachment: fixed;
+	text-align: center;
+
+	&__copy{
+		color: $color-cream;
+	}
+	
+	a:link,
+	a:visited {
+		color: $color-red;
+	}
+}

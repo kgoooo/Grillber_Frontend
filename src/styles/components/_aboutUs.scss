@@ -1,0 +1,16 @@
+.aboutUs {
+
+	&__header {
+		@include formHeader;
+		text-align: center;
+	}
+
+	&__copy__box{
+		width: 60%;
+	}
+
+	&__copy {
+		font-size: 1.8rem;
+		font-weight: 300;
+	}
+}

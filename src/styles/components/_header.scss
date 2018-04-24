@@ -1,0 +1,19 @@
+.header{
+	display: block;
+
+	&__box {
+		background-color: $color-dark-navy;
+		display: flex;
+		height: 7.5rem;
+		justify-content: space-between;		
+
+	}
+
+	&__hero-text {
+		color: $color-red;
+		display: inline-block;
+		font-family: $font-lobster;
+		font-size: 4rem;
+		margin: 1.25rem 3rem;
+	}
+}

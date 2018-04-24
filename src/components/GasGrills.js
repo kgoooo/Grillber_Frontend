@@ -15,9 +15,9 @@ const GasGrills = ({grills}) => {
             </p>
             <p>Hourly rate: ${grill.rate_hourly}</p>
             <p>Daily rate: ${grill.rate_daily}</p>
-            <button>Book this grill</button>
+            <button className="btn btn--action">Book this grill</button>
           </div>
-        )) : <p>Grills loading...</p>}
+        )) : <p>Grills are loading...</p>}
     </div>;
 }
 

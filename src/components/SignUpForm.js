@@ -19,23 +19,29 @@ class SignUpForm extends Component {
       phone: "",
       street1: "",
       street2: "",
-      state: "IL",
+      state: "",
       zipCode: "",
       password: "",
       password2: "",
-      date: moment()
+      date: moment(),
+      currentStates: ["IL", "MA", "NY", "PA"]
     };
   }
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
     console.log(e.target.value);
-  }
+  };
+  handleClick = (e) => {
+    this.setState({
+      state: e.target.value
+    })
+  };
   handleSubmit = (e) =>{
     e.preventDefault();
     postNewUser(this.state)
 
     // DISPATCH AN ACTION TO SET SIGNED IN TRUE
-  }
+  };
   render() {
     return <div className="signUpForm">
         <div className="fuck">
@@ -70,18 +76,20 @@ class SignUpForm extends Component {
                 </div>
                 <div>
                   <label htmlFor="street2" className="signUpForm__label">
-                    Street address 2 (optional)
+                    Street address 2 <span className="signUpForm__helper">(optional)</span>
                   </label>
                   <input type="text" id="street2" className="signUpForm__input" onChange={this.handleChange} />
                 </div>
                 <div>
                   <label htmlFor="state" className="signUpForm__label">State</label>
-                  <select id="state" className="signUpForm__input signUpForm__input--state"onChange={this.handleChange}>
-                    <option value="IL">IL</option>
-                    <option value="MA">MA</option>
-                    <option value="NY">NY</option>
-                    <option value="PA">PA</option>
-                  </select>
+									{this.state.currentStates.map(state => <button
+										className={this.state.state === state ? "signUpForm__buttons active" : "signUpForm__buttons"}
+										type="button"
+										value={state}
+										key={state}
+										onClick={this.handleClick}>{state}
+										</button> )}
+
                 </div>
                 <div>
                   <label htmlFor="zipCode" className="signUpForm__label">Zip code</label>
@@ -93,13 +101,13 @@ class SignUpForm extends Component {
                 </div>
                 <div>
                   <label htmlFor="password" className="signUpForm__label">
-                    Password (min 6 characters)
+                    Password <span className="signUpForm__helper">(min 6 characters)</span>
                   </label>
                   <input type="text" id="password" className="signUpForm__input" onChange={this.handleChange} />
                 </div>
                 <div>
                   <label htmlFor="password2" className="signUpForm__label">
-                    Password (please re-enter)
+                    Password <span className="signUpForm__helper">(please re-enter)</span>
                   </label>
                   <input type="text" id="password2" className="signUpForm__input" onChange={this.handleChange} />
                 </div>
@@ -124,3 +132,7 @@ export default SignUpForm;
 //   yearDropdownItemNumber={99}
 //   onChange={this.handleChange}
 // />;
+
+//<button className="signUpForm__buttons" type="button" value="MA" onClick={this.handleClick}>MA</button>
+//<button className="signUpForm__buttons" type="button" value="NY" onClick={this.handleClick}>NY</button>
+//<button className="signUpForm__buttons" type="button" value="PA" onClick={this.handleClick}>PA</button>

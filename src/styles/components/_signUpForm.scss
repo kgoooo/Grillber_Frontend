@@ -1,6 +1,6 @@
 .signUpForm{
 	@include formLook;
-	width: 60%;
+	width: 50%;
 
 	&__header {
 		color: $color-med-navy;
@@ -19,18 +19,47 @@
 	}
 
 	&__label{
-		@include labelLook;
+      @include labelLook;
 	}
 
 	&__input {
-		@include inputLook;
-
+      @include inputLook;
+      color: $color-light-navy;
+      outline-color: $color-light-navy;
 		&--state{
 			width: 60px;
 		}
 	}
 
-	.signUpButton{
-		@include formButton
+	&__helper {
+		font-size: 1.3rem;
 	}
+
+
+
+	&__buttons {
+      border: 1px solid $color-light-navy;
+      background: white;
+      transition: background-color ease-in-out 200ms;
+      outline: none;
+
+      &:hover,
+      &:active {
+        background: darken(white, 5%);
+      }
+
+
+	}
+
+	.signUpButton{
+		@include formButton;
+	}
+
+    button:not(:last-of-type){
+      margin-right: 1rem;
+    }
+
+  .active {
+    border: 1px solid red;
+  }
 }

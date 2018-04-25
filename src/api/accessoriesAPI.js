@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const fetchAllAccessories = () => {
-	const accessoriesURI = "http://localhost:3000/accessories";
+	const accessoriesURI = "http://localhost:3000/api/accessories";
 	let accessoriesList = [];
 	return axios.get(`${accessoriesURI}`)
 		.then((res) => {

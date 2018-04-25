@@ -17,13 +17,18 @@ class Accessories extends Component {
 		})
 	}
 	render(){
-		return <div>
-        <p>ACCESSORIES</p>
+		return <div className="accessories">
+        <h1 className="accessories__title">Accessories</h1>
         {this.state.accessoriesList.length >= 1 ? this.state.accessoriesList.map(
             accessory => (
-              <div key={accessory.name}>
-                <p key={accessory.name}>Name: {accessory.name}</p>
-                <p key={`${accessory.name}${accessory.price}`}>Price: {accessory.price}</p>
+							<div key={accessory.name} className="accessories__box">
+								<img src={accessory.image1} className="accessories__image"/>
+								<h2 key={accessory.name}>{accessory.name}</h2>
+								<p>{accessory.description}</p>
+                <p key={`${accessory.name}${accessory.price}`}>
+                  Price: {accessory.price}
+								</p>
+								<button className="btn btn--action">Add to cart</button>
               </div>
             )
           ) : <p>accessories loading...</p>}

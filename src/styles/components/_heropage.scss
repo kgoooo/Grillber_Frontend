@@ -11,7 +11,6 @@
 		position: absolute;
 		width: 100vw;
 		height: 100vh;
-		
 	}
 
 	&__text {
@@ -24,6 +23,10 @@
 		// transform: translate(-50%, -50%);
 		// left: 50%;
 		// top: 40%;
+	}
+	
+	&__button_box{
+		text-align: center;
 	}
 
 	&__button:not(:last-of-type) {

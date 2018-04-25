@@ -57,3 +57,17 @@
 	height: 27.5rem;
 	background-size: cover;
 }
+
+@mixin orderBoxes {
+	border: 1px solid $color-med-navy;
+	width: 40rem;
+	border-radius: 6px;
+	margin: 1.5rem auto;
+}
+
+@mixin orderTitles {
+	font-family: $font-lobster;
+	color: $color-red;
+	font-size: 5rem;
+	text-align: center;
+}

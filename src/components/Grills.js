@@ -48,9 +48,9 @@ class Grills extends Component {
 	render(){
 		return <div className="grills">
         <h1 className="grills__title">Grills</h1>
-        <button onClick={this.handleAllGrillsClick}>All Grills</button>
-        <button onClick={this.handleCharcoalClick}>Charcoal</button>
-        <button onClick={this.handleGasClick}>Gas</button>
+        <button onClick={this.handleAllGrillsClick} className="btn btn--hollow">All Grills</button>
+        <button onClick={this.handleCharcoalClick} className="btn btn--hollow">Charcoal</button>
+        <button onClick={this.handleGasClick} className="btn btn--hollow">Gas</button>
         {this.state.showing === "gas" ? <GasGrills grills={this.state.gas} /> : null}
         {this.state.showing === "charcoal" ? <CharcoalGrills grills={this.state.charcoal} /> : null}
         {this.state.showing === "all" ? <div>

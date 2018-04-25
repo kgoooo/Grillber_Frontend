@@ -1,0 +1,6 @@
+.order{
+
+	&__title{
+		@include orderTitles;
+	}
+}

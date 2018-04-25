@@ -48,7 +48,6 @@ class SignUpForm extends Component {
           </p>
           <form onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="col-1-of-2">
                 <div>
                   <label htmlFor="firstName" className="signUpForm__label">First name</label>
                   <input type="text" id="firstName" className="signUpForm__input" onChange={this.handleChange} />
@@ -88,8 +87,6 @@ class SignUpForm extends Component {
                   <label htmlFor="zipCode" className="signUpForm__label">Zip code</label>
                   <input type="text" id="zipCode" className="signUpForm__input" onChange={this.handleChange} />
                 </div>
-              </div>
-              <div className="col-1-of-2">
                 <div>
                   <label htmlFor="phone" className="signUpForm__label">Phone number</label>
                   <input type="text" id="phone" className="signUpForm__input" onChange={this.handleChange} />
@@ -109,7 +106,6 @@ class SignUpForm extends Component {
                 <button type="submit" className="btn btn--action signUpButton">
                   Sign up
                 </button>
-              </div>
             </div>
           </form>
         </div>

@@ -1,6 +1,6 @@
-.grills{
+.accessories {
 
-	&__title {
+	&__title{
 		@include orderTitles
 	}
 
@@ -8,7 +8,7 @@
 		@include orderBoxes;
 	}
 
-	&__image{
-		width: 200px;
+	&__image {
+		width: 20rem;
 	}
 }

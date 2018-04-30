@@ -41,7 +41,7 @@ class OrderCalendar extends Component {
 		return (
 			<div className="calendar">
 				<div>
-					<p>Delivery date</p>
+					<p className="calendar__label">Delivery date</p>
 					<DatePicker
 						selected={this.state.deliverDate} 
 						dateFormat="YYYY/MM/DD"
@@ -50,7 +50,7 @@ class OrderCalendar extends Component {
 						/>
 				</div>
 				<div>
-					<p>Delivery Time</p>
+					<p className="calendar__label">Delivery Time</p>
 					<DatePicker 
 						selected={this.state.deliverTime}
 						onChange={this.handleChangeDeliverTime}
@@ -62,7 +62,7 @@ class OrderCalendar extends Component {
 					/>
 				</div>
 				<div>
-					<p>Pickup date</p>
+					<p className="calendar__label">Pickup date</p>
 					<DatePicker
 						selected={this.state.pickupDate}
 						dateFormat="YYYY/MM/DD"
@@ -71,7 +71,7 @@ class OrderCalendar extends Component {
 					/>
 				</div>
 				<div>
-					<p>Pickup time</p>
+					<p className="calendar__label">Pickup time</p>
 					<DatePicker
 						selected={this.state.pickupTime}
 						onChange={this.handleChangePickupTime}

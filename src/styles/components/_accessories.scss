@@ -1,7 +1,7 @@
 .accessories {
 
 	&__title{
-		@include orderTitles
+		@include blueHeader;
 	}
 
 	&__box {

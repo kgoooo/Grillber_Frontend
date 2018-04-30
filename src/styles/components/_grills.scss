@@ -1,7 +1,9 @@
 .grills{
 
 	&__title {
-		@include orderTitles
+      @include blueHeader;
+      text-align: center;
+      margin-top: 5.5rem;
 	}
 
 	&__box {
@@ -10,5 +12,13 @@
 
 	&__image{
 		width: 200px;
+	}
+  
+    &__filter{
+      text-align: center;
+    }
+
+	&__btn {
+		margin-left: 2rem;
 	}
 }

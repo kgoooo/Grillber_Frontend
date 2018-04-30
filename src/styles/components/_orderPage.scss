@@ -1,6 +1,8 @@
 .order{
 
 	&__title{
-		@include orderTitles;
+      @include blueHeader;
+      text-align: center;
+      margin-top: 5.5rem;
 	}
 }

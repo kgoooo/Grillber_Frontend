@@ -3,9 +3,7 @@
 	width: 50%;
 
 	&__header {
-		color: $color-med-navy;
-		font-family: $font-lobster;
-		font-size: 3.6rem;
+		@include blueHeader;
 		margin-top: 1rem;
 	}
 

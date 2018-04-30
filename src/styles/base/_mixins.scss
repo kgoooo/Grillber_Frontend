@@ -39,7 +39,7 @@
 	width: 300px;
 }
 
-@mixin formHeader {
+@mixin blueHeader {
 	color: $color-med-navy;
 	font-family: $font-lobster;
 	font-size: 3.6rem;
@@ -63,11 +63,4 @@
 	width: 40rem;
 	border-radius: 6px;
 	margin: 1.5rem auto;
-}
-
-@mixin orderTitles {
-	font-family: $font-lobster;
-	color: $color-red;
-	font-size: 5rem;
-	text-align: center;
 }

@@ -37,20 +37,21 @@ class Grills extends Component {
 	}
 	handleAllGrillsClick = () => {
 		this.setState({ showing: 'all'})
-	}
+	};
 	handleCharcoalClick = () => {
 		this.setState({ showing: 'charcoal'})
-	}
+	};
 	handleGasClick = () => {
 		this.setState({ showing: 'gas'})
-	}
-	
+	};
 	render(){
 		return <div className="grills">
-        <h1 className="grills__title">Grills</h1>
-        <button onClick={this.handleAllGrillsClick} className="btn btn--hollow">All Grills</button>
-        <button onClick={this.handleCharcoalClick} className="btn btn--hollow">Charcoal</button>
-        <button onClick={this.handleGasClick} className="btn btn--hollow">Gas</button>
+        <h1 className="grills__title">Select your grill type</h1>
+			<div className="grills__filter">
+        <button onClick={this.handleAllGrillsClick} className="btn btn--hollow grills__btn">All Grills</button>
+        <button onClick={this.handleCharcoalClick} className="btn btn--hollow grills__btn">Charcoal</button>
+        <button onClick={this.handleGasClick} className="btn btn--hollow grills__btn">Gas</button>
+			</div>
         {this.state.showing === "gas" ? <GasGrills grills={this.state.gas} /> : null}
         {this.state.showing === "charcoal" ? <CharcoalGrills grills={this.state.charcoal} /> : null}
         {this.state.showing === "all" ? <div>

@@ -52,11 +52,11 @@ class Grills extends Component {
         <button onClick={this.handleCharcoalClick} className="btn btn--hollow grills__btn">Charcoal</button>
         <button onClick={this.handleGasClick} className="btn btn--hollow grills__btn">Gas</button>
 			</div>
-        {this.state.showing === "gas" ? <GasGrills grills={this.state.gas} /> : null}
-        {this.state.showing === "charcoal" ? <CharcoalGrills grills={this.state.charcoal} /> : null}
+			{this.state.showing === "gas" ? <div className="row"><GasGrills grills={this.state.gas} /></div> : null}
+			{this.state.showing === "charcoal" ? <div className="row"><CharcoalGrills grills={this.state.charcoal} /></div> : null}
         {this.state.showing === "all" ? <div>
-            <GasGrills grills={this.state.gas} />
-            <CharcoalGrills grills={this.state.charcoal} />
+					<div className="row"><GasGrills grills={this.state.gas} /></div>
+					<div className="row"><CharcoalGrills grills={this.state.charcoal} /></div>
           </div> : null}
       </div>;
 	}

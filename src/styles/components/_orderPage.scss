@@ -1,8 +1,10 @@
 .order{
+  background: #f9f9f9;
 
 	&__title{
       @include blueHeader;
       text-align: center;
       margin-top: 5.5rem;
+      display: inline-block;
 	}
 }

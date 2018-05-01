@@ -1,24 +1,52 @@
 .grills{
+  color: $color-med-navy;
 
-	&__title {
-      @include blueHeader;
-      text-align: center;
-      margin-top: 5.5rem;
-	}
+  &__title {
+    @include blueHeader;
+    text-align: center;
+    margin-top: 5.5rem;
+  }
 
-	&__box {
-		@include orderBoxes;
-	}
+  &__name {
+    text-align: center;
+  }
 
-	&__image{
-		width: 200px;
-	}
-  
-    &__filter{
-      text-align: center;
+  &__box {
+      @include orderBoxes;
+  }
+
+  &__copy {
+    padding: 0 2.5rem;
+
+    &--desc {
+      font-weight: 300;
+      line-height: 19px;
+      text-align: justify;
     }
+  }
 
-	&__btn {
-		margin-left: 2rem;
-	}
+  &__price{
+    display: block;
+    font-family: $font-lobster;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  &__btn {
+    margin-right: 2.5rem;
+  }
+
+  &__image {
+    margin: 1.5rem auto;
+    display: block;
+    width: 200px;
+  }
+
+  &__filter {
+    text-align: center;
+  }
+
+  &__btn {
+      margin-left: 2rem;
+  }
 }

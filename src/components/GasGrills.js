@@ -3,8 +3,9 @@ import React from 'react';
 const GasGrills = ({grills}) => {
 	return <div>
       <h2>Gas grills:</h2>
+		<div className="grills__wrapper">
       {grills.length >= 1 ? grills.map(grill => (
-          <div key={grill.name} className="col-1-of-3">
+          <div key={grill.name}>
 						<div className="card">
 							<div className="card__side card__side--front">
 								<img src={grill.image1} className="grills__image" />
@@ -26,6 +27,7 @@ const GasGrills = ({grills}) => {
 						</div>
           </div>
         )) : <p>Grills are loading...</p>}
+		</div>
     </div>;
 };
 

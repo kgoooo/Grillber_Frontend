@@ -1,6 +1,10 @@
 .grills{
   color: $color-med-navy;
 
+  &__wrapper {
+    @include cardGridWrapper;
+  }
+
   &__title {
     @include blueHeader;
     text-align: center;

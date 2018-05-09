@@ -86,3 +86,10 @@
 @mixin cardMargin {
   margin-left: 2.5rem;
 }
+
+@mixin cardGridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(342px, 342px));
+  grid-gap: 5rem;
+  justify-content: center;
+}

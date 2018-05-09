@@ -18,7 +18,7 @@ const HeroPage = () => (
 			</div>
 		</div> 
 	</div>
-)
+);
 		
 		export default HeroPage;
 		// <img className="hero__image" src="/src/resources/hero-min.jpg" />

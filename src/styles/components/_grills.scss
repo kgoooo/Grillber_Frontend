@@ -4,7 +4,7 @@
   &__title {
     @include blueHeader;
     text-align: center;
-    margin-top: 5.5rem;
+    margin-top: 10.5rem;
   }
 
   &__name {
@@ -16,24 +16,19 @@
   }
 
   &__copy {
-    padding: 0 2.5rem;
+    @include copyPadding;
 
     &--desc {
-      font-weight: 300;
-      line-height: 19px;
-      text-align: justify;
+      @include copyDescription;
     }
   }
 
   &__price{
-    display: block;
-    font-family: $font-lobster;
-    font-size: 2.5rem;
-    margin-top: 1rem;
+    @include cardPrice;
   }
 
   &__btn {
-    margin-right: 2.5rem;
+    @include cardMargin;
   }
 
   &__image {

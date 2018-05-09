@@ -64,3 +64,25 @@
 	border-radius: 6px;
 	margin: 1.5rem auto;
 }
+
+// GRILLS & ACCESSORIES STYLES
+@mixin copyPadding{
+  padding: 0 2.5rem;
+}
+
+@mixin copyDescription {
+  font-weight: 300;
+  line-height: 19px;
+  text-align: justify;
+}
+
+@mixin cardPrice {
+  display: block;
+  font-family: $font-lobster;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+@mixin cardMargin {
+  margin-left: 2.5rem;
+}

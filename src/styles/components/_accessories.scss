@@ -1,14 +1,59 @@
 .accessories {
+  color: $color-med-navy;
 
-	&__title{
-		@include blueHeader;
-	}
+  &__title{
+    @include blueHeader;
+    text-align: center;
+    margin-top: 10.5rem;
+  }
 
-	&__box {
-		@include orderBoxes;
-	}
+  &__card{
+    height: 52rem;
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    position: relative;
+    margin-bottom: 3rem;
 
-	&__image {
-		width: 20rem;
-	}
+    &__side{
+      border: 1px solid $color-light-navy;
+      backface-visibility: hidden;
+      border-radius: 6px;
+      box-shadow: 0 1.5rem 4rem rgba(black, .15);
+      height: 52rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+      background: white;
+    }
+  }
+
+
+  &__name {
+    text-align: center;
+  }
+
+  &__copy {
+    @include copyPadding;
+    @include copyDescription;
+  }
+  
+  &__image {
+    margin: 1.5rem auto;
+    display: block;
+    width: 200px;
+  }
+
+  &__price{
+    @include copyPadding;
+    &--span{
+      @include cardPrice;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__btn {
+    @include cardMargin;
+  }
 }

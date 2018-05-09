@@ -1,61 +1,70 @@
 .signUpForm{
-	@include formLook;
-	width: 50%;
+  @include formLook;
+  width: 38%;
 
-	&__header {
-		@include blueHeader;
-		margin-top: 1rem;
-	}
+  &__wrapper {
+    display: grid;
+    justify-items: center;
+  }
+  &__header {
+      @include blueHeader;
+      margin-top: 1rem;
+  }
 
-	&__copy {
-		font-weight: 300;
-		font-size: 2.2rem;
-		color: $color-med-navy;
-		width: 60%;
-		margin: 0 auto 2.4rem auto;
-		// text-align: center;
-	}
+  &__copy {
+      font-weight: 300;
+      font-size: 2.2rem;
+      color: $color-med-navy;
+      width: 60%;
+      margin: 0 auto 2.4rem auto;
+      // text-align: center;
+  }
 
-	&__label{
-      @include labelLook;
-	}
+  &__label{
+    @include labelLook;
+  }
 
-	&__input {
-      @include inputLook;
-      color: $color-light-navy;
-      outline-color: $color-light-navy;
-		&--state{
-			width: 60px;
-		}
-	}
+  &__input {
+    @include inputLook;
+    color: $color-light-navy;
+    outline-color: $color-light-navy;
 
-	&__helper {
-		font-size: 1.3rem;
-	}
-
-
-
-	&__buttons {
-      border: 1px solid $color-light-navy;
-      background: white;
-      transition: background-color ease-in-out 200ms;
-      outline: none;
-
-      &:hover,
-      &:active {
-        background: darken(white, 5%);
+      &--state{
+          width: 60px;
       }
+  }
 
+  &__helper {
+      font-size: 1.3rem;
+  }
 
-	}
+  &__state {
+    width: 304px;
+    text-align: left;
+  }
 
-	.signUpButton{
-		@include formButton;
-	}
+  &__buttons {
+    border: 1px solid $color-light-navy;
+    background: white;
+    transition: background-color ease-in-out 200ms;
+    outline: none;
+    text-align: left;
 
-    button:not(:last-of-type){
-      margin-right: 1rem;
+    &:hover,
+    &:active {
+      background: darken(white, 5%);
     }
+
+
+  }
+
+  .signUpButton{
+      @include formButton;
+  }
+
+  button:not(:last-of-type){
+    margin-right: 1rem;
+  }
 
   .active {
     border: 1px solid red;

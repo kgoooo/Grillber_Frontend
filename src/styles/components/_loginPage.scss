@@ -1,11 +1,11 @@
 .loginP {
-	background-attachment: fixed;
-	background-image: linear-gradient(180deg, rgba($color-dark-navy, .6), rgba($color-dark-navy, .15)),
-	url("http://kgoehringer.io/resources/login-min.jpg");
-	background-size: cover;
-	background-position: 0 70%;
-	display: inline-block;
-	height: 100vh;
-	width: 100vw;
-	text-align: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(180deg, rgba($color-dark-navy, .6), rgba($color-dark-navy, .15)),
+  url("http://kgoehringer.io/resources/login-min.jpg");
+  background-size: cover;
+  background-position: 0 70%;
+  display: inline-block;
+  height: calc(100vh - 75px);
+  width: 100vw;
+  text-align: center;
 }

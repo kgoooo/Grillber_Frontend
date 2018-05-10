@@ -1,35 +1,76 @@
 .hero {
-	background-image: linear-gradient(180deg, rgba($color-dark-navy, 1), rgba($color-dark-navy, .1)),
-	url("http://kgoehringer.io/resources/hero-min.jpg");
-	background-size: cover;
-	background-position: 0 100%;
-	height: 100vh;
-	position: relative;
-	background-attachment: fixed;
+  background-image: linear-gradient(180deg, rgba($color-dark-navy, 1), rgba($color-dark-navy, .1)),
+  url("http://kgoehringer.io/resources/hero-min.jpg");
+  background-size: cover;
+  background-position: 0 100%;
+  height: calc(100vh - 75px);
+  position: relative;
+  background-attachment: fixed;
 
-	&__box {
-		position: absolute;
-		width: 100vw;
-		height: 100vh;
-	}
+  &__box {
+    display: grid;
+    align-items: center;
+    justify-content: center;
 
-	&__text {
-		color: $color-cream;
-		font-weight: 300;
-		font-size: 5rem;
-		margin: 10.5rem auto;
-		text-align: center;
-		width: 60%;
-		// transform: translate(-50%, -50%);
-		// left: 50%;
-		// top: 40%;
-	}
-	
-	&__button_box{
-		text-align: center;
-	}
+    &--center {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+    }
+  }
 
-	&__button:not(:last-of-type) {
-		margin-right: 2.5rem;
-	}
+  &__text {
+    color: $color-cream;
+    font-weight: 300;
+    font-size: 5rem;
+    margin: 10.5rem auto;
+    //margin-top: 0px;
+    text-align: center;
+    width: 60%;
+  }
+
+  &__button_box{
+    //text-align: center;
+  }
+
+  &__button:not(:last-of-type) {
+    margin-right: 2.5rem;
+  }
 }
+
+
+//.hero {
+//	background-image: linear-gradient(180deg, rgba($color-dark-navy, 1), rgba($color-dark-navy, .1)),
+//	url("http://kgoehringer.io/resources/hero-min.jpg");
+//	background-size: cover;
+//	background-position: 0 100%;
+//	height: 100vh;
+//	position: relative;
+//	background-attachment: fixed;
+//
+//	&__box {
+//		position: absolute;
+//		width: 100vw;
+//		height: 100vh;
+//	}
+//
+//	&__text {
+//		color: $color-cream;
+//		font-weight: 300;
+//		font-size: 5rem;
+//		margin: 10.5rem auto;
+//		text-align: center;
+//		width: 60%;
+//		// transform: translate(-50%, -50%);
+//		// left: 50%;
+//		// top: 40%;
+//	}
+//
+//	&__button_box{
+//		text-align: center;
+//	}
+//
+//	&__button:not(:last-of-type) {
+//		margin-right: 2.5rem;
+//	}
+//}

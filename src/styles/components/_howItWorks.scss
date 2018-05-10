@@ -1,7 +1,4 @@
 .howWorks{
-  //margin-bottom: 5rem;
-  //display: grid;
-  //grid-template-columns: auto auto;
   padding: 4rem;
 
   &__item--L {
@@ -11,6 +8,8 @@
     grid-template-rows: 400px;
     align-items: center;
     margin-bottom: 4rem;
+    background: #f9f9f9;
+    padding: 2.5rem;
   }
 
   &__item--R {
@@ -71,56 +70,3 @@
   }
 
 }
-
-//.howWorks{
-//	margin-bottom: 5rem;
-//	&__header{
-//		font-family: $font-lobster;
-//		color: $color-med-navy;
-//		text-align: center;
-//		margin: 5rem 0 7rem 0;
-//	}
-//
-//	&__copy {
-//		font-size: 2rem;
-//		font-weight: 300;
-//		line-height: 2.7rem;
-//	}
-//
-//	&--number {
-//		color: $color-red;
-//		font-size: 4rem;
-//		font-family: $font-lobster;
-//	}
-//
-//	&--1 {
-//		background-image: url("http://kgoehringer.io/resources/step_1-min.jpg");
-//		@include howItWorksImages;
-//		background-position-y: 40%;
-//	}
-//
-//	&--2 {
-//		background-image: url("http://kgoehringer.io/resources/step_2-min.jpg");
-//		@include howItWorksImages;
-//		background-position-y: 44%;
-//	}
-//
-//	&--3 {
-//		background-image: url("http://kgoehringer.io/resources/step_3-min.jpg");
-//		@include howItWorksImages;
-//		background-position-y: 73%;
-//	}
-//
-//	&--4 {
-//		background-image: url("http://kgoehringer.io/resources/step_4.jpg");
-//		@include howItWorksImages;
-//		background-position-y: 10%;
-//	}
-//
-//	&--6 {
-//		background-image: url("http://kgoehringer.io/resources/step_6-min.jpg");
-//		@include howItWorksImages;
-//		background-position-y: 30%;
-//	}
-//
-//}

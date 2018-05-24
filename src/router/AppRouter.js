@@ -4,12 +4,12 @@ import HomePage from "../components/HomePage";
 import HeroPage from "../components/HeroPage";
 import SignUpPage from "../components/SignUpPage";
 import HowitWorks from "../components/HowitWorks";
-import About from "../components/AboutUs";
 import ContactUs from "../components/ContactUs";
 import LoginPage from "../components/LoginPage";
 import AboutUs from "../components/AboutUs";
 import Header from  "../components/Header"
 import OrderPage from "../components/OrderPage";
+import Footer from "../components/Footer";
 
 const AppRouter = () => (
   <div>
@@ -23,6 +23,7 @@ const AppRouter = () => (
       <Route path="/login" component={LoginPage} />
       <Route path="/order" component={OrderPage}/>
     </Switch>
+    <Footer />
   </div>
 );
 

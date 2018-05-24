@@ -1,0 +1,42 @@
+.footer {
+  background: #222222;
+  color: $color-cream;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 2rem;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+
+  &__list {
+    list-style: none;
+    display: flex;
+
+    &-item:not(lastoftype) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__logo {
+    font-family: $font-lobster;
+    font-size: 3.5rem;
+    margin: 0;
+
+    &-copy {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+  
+  a{
+    color: $color-cream;
+    text-decoration: none;
+    transition: color ease-in-out 200ms;
+  }
+
+  a:hover,
+  a:active{
+    color: $color-red;
+  }
+
+}

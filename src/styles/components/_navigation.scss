@@ -1,24 +1,25 @@
 .navigation {
 
-	&__list {
-		list-style: none;
-		display: flex;
-		margin: 2.5rem 3rem;
-		
-		a{
-			color: $color-cream;
-			font-size: 2rem;
-			text-decoration: none;
-			display: inline-block;
-		}
+  &__list {
+    list-style: none;
+    display: flex;
+    margin: 2.5rem 3rem;
 
-		a:not(lastoftype){
-			margin-right: 1.5rem;
-		}
+    a{
+      color: $color-cream;
+      font-size: 2rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: color ease-in-out 200ms;
+    }
 
-		// a:link,
-		// a:visited{
-		// 	// color: $color-cream;
-		// }
-	}
+    a:hover,
+    a:active {
+      color: $color-red;
+    }
+
+    a:not(lastoftype){
+      margin-right: 1.5rem;
+    }
+  }
 }

@@ -15,7 +15,7 @@ class SignUpForm extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      dob: "1988-04-25",
+      dob: "0000-00-00",
       phone: "",
       street1: "",
       street2: "",
@@ -24,9 +24,19 @@ class SignUpForm extends Component {
       password: "",
       password2: "",
       date: moment(),
-      currentStates: ["IL", "MA", "NY", "PA"]
+      currentStates: ["IL", "MA", "NY", "PA"],
+      yearOptions: []
     };
   }
+  componentWillMount(){
+  	let yearArr = [];
+  	for(var i = 2018; i > 1900; i--){
+  		yearArr.push(i)
+		}
+		this.setState({
+			yearOptions: yearArr
+		})
+	}
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
     console.log(e.target.value);

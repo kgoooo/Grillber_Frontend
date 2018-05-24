@@ -1,15 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch} from 'react-router-dom';
 
-import HomePage from './HomePage';
-import HeroPage from './HeroPage';
-import SignUpPage from './SignUpPage';
-import OrderPage from './OrderPage';
-import HowitWorks from './HowitWorks';
-import About from './AboutUs';
-import ContactUs from './ContactUs';
-import LoginPage from './LoginPage';
-import AboutUs from './AboutUs';
 
 const Navigation = () => (
 	<div className="navigation">

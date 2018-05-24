@@ -69,4 +69,15 @@
   .active {
     border: 1px solid red;
   }
+
+  &__DOBWrapper {
+    width: 304px;
+    text-align: left;
+  }
+
+  select {
+    font-weight: 100;
+    color: $color-dark-navy;
+    font-family: inherit;
+  }
 }

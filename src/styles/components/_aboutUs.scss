@@ -5,12 +5,15 @@
 		text-align: center;
 	}
 
-	&__copy__box{
-		width: 60%;
-	}
-
 	&__copy {
 		font-size: 1.8rem;
 		font-weight: 300;
+      
+      &__wrapper{
+        display: grid;
+        width: 60%;
+        //align-items: center;
+        justify-items: center;
+      }
 	}
 }

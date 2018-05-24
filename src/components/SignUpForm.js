@@ -15,7 +15,7 @@ class SignUpForm extends Component {
       firstName: "",
       lastName: "",
       email: "",
-      dob: "0000-00-00",
+      dob: "",
       phone: "",
       street1: "",
       street2: "",
@@ -25,33 +25,58 @@ class SignUpForm extends Component {
       password2: "",
       date: moment(),
       currentStates: ["IL", "MA", "NY", "PA"],
-      yearOptions: []
+      yearOptions: [],
+			year: '2018',
+			month: 'January',
+			day: '01',
+			monthOptions: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			dayOptions: []
     };
   }
+
+
   componentWillMount(){
   	let yearArr = [];
-  	for(var i = 2018; i > 1900; i--){
-  		yearArr.push(i)
+  	let dayArr = [];
+  	let padJ = null;
+  	for(let i = 2018; i > 1900; i--){
+  		yearArr.push(i.toString());
+		}
+		for (let j = 1; j < 32; j++) {
+			padJ = j.toString();
+			padJ = padJ.padStart(2, '0');
+			console.log(padJ);
+  		dayArr.push(padJ);
 		}
 		this.setState({
-			yearOptions: yearArr
-		})
-	}
+			yearOptions: yearArr,
+			dayOptions: dayArr
+		});
+	};
+
+
   handleChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
     console.log(e.target.value);
   };
+
   handleClick = (e) => {
     this.setState({
       state: e.target.value
     })
   };
+
   handleSubmit = (e) =>{
     e.preventDefault();
+    let dob = this.state.year + "-" + this.state.month + "-" + this.state.day;
+    this.setState({
+			dob
+		});
     postNewUser(this.state)
 
     //TODO DISPATCH AN ACTION TO SET SIGNED IN TRUE
   };
+
   render() {
     return <div className="signUpForm">
         <div>
@@ -78,7 +103,17 @@ class SignUpForm extends Component {
               </div>
               <div>
                 <label htmlFor="dob" className="signUpForm__label">Date of birth</label>
-                <input type="text" className="signUpForm__input" />
+								<div className="signUpForm__DOBWrapper">
+									<select name="month" id="month" onChange={this.handleChange}>
+										{this.state.monthOptions.map((month, i) => (<option key={month} value={i + 1}>{month}</option>))}
+									</select>
+									<select name="day" id="day" onChange={this.handleChange}>
+										{this.state.dayOptions.map(day => (<option key={day} value={day}>{day}</option>))}
+									</select>
+									<select name="year" id="year" onChange={this.handleChange}>
+										{this.state.yearOptions.map(year => ( <option key={year} value={year}>{year}</option> ))}
+									</select>
+								</div>
               </div>
               <div>
                 <label htmlFor="street1" className="signUpForm__label">Street address</label>

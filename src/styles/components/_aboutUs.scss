@@ -1,8 +1,9 @@
 .aboutUs {
 	height: 100vh;
 	&__header {
-		@include blueHeader;
-		text-align: center;
+      @include blueHeader;
+      text-align: center;
+      margin-top: 6rem;
 	}
 
 	&__copy {
@@ -13,6 +14,7 @@
         display: grid;
         width: 60%;
         //align-items: center;
+        grid-template-columns: 1fr;
         justify-items: center;
       }
 	}

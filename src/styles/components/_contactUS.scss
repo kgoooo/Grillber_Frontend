@@ -1,0 +1,14 @@
+.contactUs {
+
+  &__header {
+    @include blueHeader;
+    text-align: center;
+    margin-top: 6rem;
+  }
+
+
+
+  &__img {
+    width: 45%;
+  }
+}
